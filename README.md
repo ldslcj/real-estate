@@ -1,1 +1,2 @@
 # REAL ESTATE SUM 21
+# FIXED BUG!!!
