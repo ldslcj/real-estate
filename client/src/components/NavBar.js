@@ -28,6 +28,12 @@ const Navbar =()=> {
                Available
             </Menu.Item>
           </Link>
+
+          <Link to="/cities">
+            <Menu.Item>
+               Cities
+            </Menu.Item>
+          </Link>
           
           <Link to='/examples'>
             <Menu.Item>Examples</Menu.Item>
