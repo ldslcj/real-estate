@@ -1,14 +1,6 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { Select, Table } from 'semantic-ui-react'
-import useAxiosOnMount from '../customHooks/useAxiosOnMount';
-
-const dummyCities = [{ city: 'SLC' }, { city: 'Draper' }]
-const dummyProperties = [
-    { sq_ft: 1000, price: 1234134, beds: 3, baths: 4 },
-    { sq_ft: 2000, price: 134134, beds: 2, baths: 3 },
-    { sq_ft: 3000, price: 1123414, beds: 1, baths: 4 }
-  ];
 
 const Cities = (props) => {
     const [cities, setCities] = useState([])
@@ -19,9 +11,8 @@ const Cities = (props) => {
 
     const getCities = async () => {
         try {
-            //  let res = await axios.get('/api/cities')
-            //  setCities(res.data)
-            setCities(dummyCities)
+            let res = await axios.get('/api/cities')
+            setCities(res.data)
         } catch (err) {
             console.log(err)
             console.log(err.response)
@@ -35,11 +26,9 @@ const Cities = (props) => {
     };
 
     const handleChange = async (e, { value }) => {
-        // alert(value);
         try {
-        //   let res = await axios.get(`/xx-api/cities/${value}`)
-        //   setCityProperties(res.data)
-          setCityProperties(dummyProperties)
+          let res = await axios.get(`/api/cities/${value}`)
+          setCityProperties(res.data)
         } catch(err){
             console.log(err)
             console.log(err.response)
