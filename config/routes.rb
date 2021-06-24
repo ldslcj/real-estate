@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     get '/things', to:'things#index'
     get '/properties', to:'properties#index'
     get '/cities', to: 'addresses#cities'
+    get '/cities/:city', to:'properties#city'
   end 
 end
