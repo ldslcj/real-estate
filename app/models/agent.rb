@@ -16,4 +16,10 @@ class Agent < ApplicationRecord
       .group('a.id, first_name, last_name, email, sold')
       .order('unsold_homes DESC')
     end
+
+    def self.buyers(id)
+        select('*')
+        .from('buyers')
+        .where('agent_id = ?', id)
+    end
 end
