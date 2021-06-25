@@ -10,7 +10,7 @@ class Buyer < ApplicationRecord
 # WHERE b.id = 32 AND p.sold <> true
 
   def self.my_homes(id, cities)
-    select('b.first_name as buyer_name, a.first_name as agent_name, price, sq_ft, sold, p.id as property_id, city, max_price, cities')
+    select('b.first_name as buyer_name, a.first_name as agent_name, price, sq_ft, sold, beds, baths, p.id as property_id, city, max_price, cities')
     .from('buyers as b')
     .joins("
       INNER JOIN agents AS a ON a.id = b.agent_id

@@ -34,6 +34,11 @@ const Navbar =()=> {
                Cities
             </Menu.Item>
           </Link>
+          <Link to="/homes">
+            <Menu.Item>
+               Find Home
+            </Menu.Item>
+          </Link>
           
           <Link to='/examples'>
             <Menu.Item>Examples</Menu.Item>

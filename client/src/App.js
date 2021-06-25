@@ -4,6 +4,7 @@ import Navbar from './components/NavBar';
 import Available from "./pages/Available";
 import Cities from "./pages/Cities";
 import Examples from "./pages/Examples";
+import FindHomes from "./pages/FindHomes";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Switch>
           <Route exact path="/" component={Available} />
           <Route exact path="/cities" component={Cities} />
+          <Route exact path="/homes" component={FindHomes} />
           <Route exact path="/examples" component={Examples} />
         </Switch>
       </Container>
