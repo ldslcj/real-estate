@@ -5,6 +5,7 @@ import Available from "./pages/Available";
 import Cities from "./pages/Cities";
 import Examples from "./pages/Examples";
 import FindHomes from "./pages/FindHomes";
+import Prices from "./pages/Prices";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/cities" component={Cities} />
           <Route exact path="/homes" component={FindHomes} />
           <Route exact path="/examples" component={Examples} />
+          <Route exact path="/prices" component={Prices} />
         </Switch>
       </Container>
     </>

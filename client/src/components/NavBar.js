@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import React, {useEffect, useState} from "react";
 import { Link  } from "react-router-dom";
@@ -42,6 +41,10 @@ const Navbar =()=> {
           
           <Link to='/examples'>
             <Menu.Item>Examples</Menu.Item>
+          </Link>
+
+          <Link to='/prices'>
+            <Menu.Item>Prices</Menu.Item>
           </Link>
 
       </Menu>
